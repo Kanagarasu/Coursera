@@ -1,0 +1,743 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>
+      <h1>Bus Ticket Booking</h1>
+    </title>
+  </head>
+  <body>
+    <center>
+       <h3>Bus Ticket Booking</h3>
+       <h5>reserved seet <div class="one"></div></h5>  
+       
+       <h5>unreserved seet<div class="two"></div></h5>
+       <h5>driver seet<div class="three"></div></h5>
+   </center>
+  <p class="address">
+       <p class="address">from:<select>
+           <option>chennai</option>
+         </select>
+      </p>
+       
+       <p class="address">To:<select>
+            <option>Tiruchirappali</option>
+            <option>Maturai</option>
+            <option>Dindugal</option>
+         </select>
+      </p>
+      <center>
+        <p>
+            Date:<input type="date">
+        </p>
+      </center>
+  </p>   
+<center class="a">
+    <table border="1px">
+    
+      <tr>
+        <td style="padding-left:100px; border-width:0px;"></td>
+        <td><div class="red"></div></div></td>
+      </tr>
+  </table>
+  <table class="b" border="1px">
+      <tr>
+      
+      </tr>
+      
+      <tr>
+        <td ><div id="1" onclick="change1()"></div></td>
+        <td><div id="2" onclick="change2()"></div></td>
+        <td style="border-width:0px;" rowspan="8" colspan="2"style="padding:20px"></td>
+        <td><div id="3" onclick="change3()"></div></td>
+        <td><div id="4" onclick="change4()"></div></td>
+        <td><div id="5" onclick="change5()"></div></td>
+      </tr>
+      
+      <tr>
+        <td><div id="6" onclick="change6()"></div></td>
+        <td><div id="7" onclick="change7()"></div></td>
+        <td><div id="8" onclick="change8()"></div></td>
+        <td><div id="9" onclick="change9()"></div></td>
+        <td><div id="10" onclick="change10()"></div></td>
+      </tr>
+      
+      <tr>
+        <td><div id="11" onclick="change11()"></div></td>
+        <td><div id="12" onclick="change12()"></div></td>
+        <td><div id="13" onclick="change13()"></div></td>
+        <td><div id="14" onclick="change14()"></div></td>
+        <td><div id="15" onclick="change15()"></div></td>
+      </tr>
+        
+      <tr>
+        <td><div id="16" onclick="change16()"></div></td>
+        <td><div class="blue"></div></td>
+        <td><div id="17" onclick="change17()"></div></td>
+        <td><div id="18" onclick="change18()"></div></td>
+        <td><div id="19" onclick="change19()"></div></td>
+      </tr>
+      
+       <tr>
+        <td><div id="20" onclick="change20()"></div></td>
+        <td><div id="21" onclick="change21()"></div></td>
+        <td><div id="22" onclick="change22()"></div></td>
+        <td><div id="23" onclick="change23()"></div></td>
+        <td><div id="24" onclick="change24()"></div></td>
+      </tr>
+      
+       <tr>
+        <td><div id="25" onclick="change25()"></div></td>
+        <td><div id="26" onclick="change26()"></div></td>
+        <td><div id="27" onclick="change27()"></div></td>
+        <td><div class="blue"></div></td>
+        <td><div id="28" onclick="change28()"></div></td>
+      </tr>
+      
+      <tr>
+        <td><div id="29" onclick="change29()"></div></td>
+        <td><div id="30" onclick="change30()"></div></td>
+        <td><div id="31" onclick="change31()"></div></td>
+        <td><div id="32" onclick="change32()"></div></td>
+        <td><div id="33" onclick="change33()"></div></td>
+      </tr>
+      <tr >
+         <td><div id="34" onclick="change34()"></div></td>
+        <td><div class="blue"></div></td>
+        <td><div id="35" onclick="change35()"></div></td>
+        <td><div id="36" onclick="change36()"></div></td>
+        <td><div id="37" onclick="change37()"></div></td>
+      </tr>
+   </table>
+  
+</center>
+<h6 class="seettot">one seet payment:<h6 id="opay">320</h6></h6>
+  <!--<h6 class="seetbook">your booking payment is:<h6 id="bpay">pay</h6></h6>-->
+   <style>
+   .address{
+     margin-top:50px;
+     margin-right:20px;
+     display:inline-block;
+   }
+   #opay{
+     color:green;
+     display:inline-block;
+   }
+   #bpay{
+     color:green;
+     display:inline-block;
+   }
+  .seettot{
+    display:inline;
+    margin-left:20px;
+  }
+   .seetbook{
+      display:inline;
+      margin-left:50px;
+    }
+  div{
+      background-color: green;
+      width: 20px;
+      height: 20px;
+      margin-top:10px;
+  }
+  div:hover{
+      curser:pointer;
+      transform:scale(1.3);
+  }
+  .red{
+      background-color: red;
+      width: 20px;
+      height: 20px;
+      margin-top:10px;
+  }
+  tr{
+      width: 20px;
+      height: 20px;
+  }
+  td{
+      width: 20px;
+      height: 20px;
+      border-radius:5px;
+  }
+     
+  .blue{
+      background-color: blue;
+      width: 20px;
+      height: 20px;
+      margin-top:10px;
+  }
+  h5{
+      display:inline;
+      margin-left: 10px;
+  }
+  .one{
+      background-color: blue;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+ }
+ .two{
+      background-color: green;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+  }
+  .three{
+      background-color: red;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+  }
+  .a{
+      margin-top: 100px;
+}
+</style>
+<script>
+     var id1=document.getElementById("1")
+     var id2=document.getElementById("2")
+     var id3=document.getElementById("3")
+     var id4=document.getElementById("4")
+     var id5=document.getElementById("5")
+     var id6=document.getElementById("6")
+     var id7=document.getElementById("7")
+     var id8=document.getElementById("8")
+     var id9=document.getElementById("9")
+     var id10=document.getElementById("10")
+     var id11=document.getElementById("11")
+     var id12=document.getElementById("12")
+     var id13=document.getElementById("13")
+     var id14=document.getElementById("14")
+     var id15=document.getElementById("15")
+     var id16=document.getElementById("16")
+     var id17=document.getElementById("17")
+     var id18=document.getElementById("18")
+     var id19=document.getElementById("19")
+     var id20=document.getElementById("20")
+     var id21=document.getElementById("21")
+     var id22=document.getElementById("22")
+     var id23=document.getElementById("23")
+     var id24=document.getElementById("24")
+     var id25=document.getElementById("25")
+     var id26=document.getElementById("26")
+     var id27=document.getElementById("27")
+     var id28=document.getElementById("28")
+     var id29=document.getElementById("29")
+     var id30=document.getElementById("30")
+     var id31=document.getElementById("31")
+     var id32=document.getElementById("32")
+     var id33=document.getElementById("33")
+     var id34=document.getElementById("34")
+     var id35=document.getElementById("35")
+     var id36=document.getElementById("36")
+     var id37=document.getElementById("37")
+     var c=0
+     var toal=0
+     
+     function change1()
+       {
+           if(id1.style.backgroundColor=="green")
+           {
+              id1.style.backgroundColor="blue";
+              c=c+1;
+              total=(c*320);
+              bpay.textContent=c;
+          }
+          else
+          {
+            id1.style.backgroundColor="green";
+            c=c-1;
+            total=(c*320);
+            bpay.textContent=c;
+          }
+        }
+        function change2()
+        {
+           if(id2.style.backgroundColor=="green")
+           {
+              id2.style.backgroundColor="blue";
+              c=c+1;
+              total=(c*320);
+              bpay.textContent=c;
+          }
+          else
+          {
+            id2.style.backgroundColor="green";
+            c=c-1;
+            total=(c*320);
+            bpay.textContent=c;
+          }
+      }
+      function change3()
+      {
+           if(id3.style.backgroundColor=="green")
+           {
+              id3.style.backgroundColor="blue";
+              c++;
+              
+          }
+          else
+          {
+            id3.style.backgroundColor="green";
+            c--;
+            
+          }
+        }
+        function change4()
+       {
+           if(id4.style.backgroundColor=="green")
+           {
+              id4.style.backgroundColor="blue";
+              c++;
+              
+          }
+          else
+          {
+            id4.style.backgroundColor="green";
+            c--;
+            
+          }
+        }
+        function change5()
+       {
+           if(id5.style.backgroundColor=="green")
+           {
+              id5.style.backgroundColor="blue";
+              c++;
+              
+          }
+          else
+          {
+            id5.style.backgroundColor="green";
+            c--;
+            
+          }
+        }
+        function change6()
+       {
+           if(id6.style.backgroundColor=="green")
+           {
+              id6.style.backgroundColor="blue";
+              c++;
+              
+          }
+          else
+          {
+            id6.style.backgroundColor="green";
+            c--;
+            
+          }
+        }
+        function change7()
+       {
+           if(id7.style.backgroundColor=="green")
+           {
+              id7.style.backgroundColor="blue";
+              c++;
+              
+          }
+          else
+          {
+            id7.style.backgroundColor="green";
+            c=c-1;
+            
+          }
+        }
+        function change8()
+       {
+           if(id8.style.backgroundColor=="green")
+           {
+              id8.style.backgroundColor="blue";
+              c=c+1;
+              
+          }
+          else
+          {
+            id8.style.backgroundColor="green";
+            c=c-1;
+            
+            
+          }
+        }
+        function change9()
+       {
+           if(id9.style.backgroundColor=="green")
+           {
+              id9.style.backgroundColor="blue";
+              c=c+1;
+              
+          }
+          else
+          {
+            id9.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change10()
+       {
+           if(id10.style.backgroundColor=="green")
+           {
+              id10.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id10.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change11()
+       {
+           if(id11.style.backgroundColor=="green")
+           {
+              id11.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id11.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change12()
+       {
+           if(id12.style.backgroundColor=="green")
+           {
+              id12.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id12.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change13()
+       {
+           if(id13.style.backgroundColor=="green")
+           {
+              id13.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id13.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change14()
+       {
+           if(id14.style.backgroundColor=="green")
+           {
+              id14.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id14.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change15()
+       {
+           if(id15.style.backgroundColor=="green")
+           {
+              id15.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id15.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change16()
+       {
+           if(id16.style.backgroundColor=="green")
+           {
+              id16.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id16.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change17()
+       {
+           if(id17.style.backgroundColor=="green")
+           {
+              id17.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id17.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change18()
+       {
+           if(id18.style.backgroundColor=="green")
+           {
+              id18.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id18.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change19()
+       {
+           if(id19.style.backgroundColor=="green")
+           {
+              id19.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id19.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change20()
+       {
+           if(id20.style.backgroundColor=="green")
+           {
+              id20.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id20.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change21()
+       {
+           if(id21.style.backgroundColor=="green")
+           {
+              id21.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id21.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change22()
+       {
+           if(id22.style.backgroundColor=="green")
+           {
+              id22.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id22.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change23()
+       {
+           if(id23.style.backgroundColor=="green")
+           {
+              id23.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id23.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change24()
+       {
+           if(id24.style.backgroundColor=="green")
+           {
+              id24.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id24.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change25()
+       {
+           if(id25.style.backgroundColor=="green")
+           {
+              id25.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id25.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change26()
+       {
+           if(id26.style.backgroundColor=="green")
+           {
+              id26.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id26.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change27()
+       {
+           if(id27.style.backgroundColor=="green")
+           {
+              id27.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id27.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change28()
+       {
+           if(id28.style.backgroundColor=="green")
+           {
+              id28.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id28.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change29()
+       {
+           if(id29.style.backgroundColor=="green")
+           {
+              id29.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id29.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change30()
+       {
+           if(id30.style.backgroundColor=="green")
+           {
+              id30.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id30.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change31()
+       {
+           if(id31.style.backgroundColor=="green")
+           {
+              id31.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id31.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change32()
+       {
+           if(id32.style.backgroundColor=="green")
+           {
+              id32.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id32.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change33()
+       {
+           if(id33.style.backgroundColor=="green")
+           {
+              id33.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id33.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change34()
+       {
+           if(id34.style.backgroundColor=="green")
+           {
+              id34.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id34.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change35()
+       {
+           if(id35.style.backgroundColor=="green")
+           {
+              id35.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id35.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change36()
+       {
+           if(id36.style.backgroundColor=="green")
+           {
+              id36.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id36.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        function change37()
+       {
+           if(id37.style.backgroundColor=="green")
+           {
+              id37.style.backgroundColor="blue";
+              c=c+1;
+          }
+          else
+          {
+            id37.style.backgroundColor="green";
+            c=c-1;
+          }
+        }
+        
+   </script>
+    
+  </body>
+</html>
